@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1 class="display-4">Welcome to our Events App!</h1>
+    <p class="lead">This is where you can explore all the events and create your own.</p>
+    <hr class="my-4">
+    <%= link_to "New Event", new_event_path, class: "btn btn-primary btn-lg" %>
+  </div>
+
+  <h2 class="mt-5">Events</h2>
+
+  <div class="row">
+    <% @events.each do |event| %>
+      <div class="col-md-4">
+        <div class="card mb-4 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title"><%= event.title %></h5>
+            <p class="card-text"><%= event.description %></p>
+            <%= link_to "Show this event", event, class: "btn btn-sm btn-outline-secondary" %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+

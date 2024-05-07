@@ -1,0 +1,2678 @@
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 14:38:17 +0200
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate
+
+You have 5 pending migrations:
+
+db/migrate/20240507092750_devise_create_users.rb
+db/migrate/20240507092951_create_events.rb
+db/migrate/20240507093005_create_attendances.rb
+db/migrate/20240507110207_add_attributes_to_users.rb
+db/migrate/20240507110820_add_location_to_events.rb
+
+
+):
+  
+activerecord (7.1.3.2) lib/active_record/migration.rb:755:in `check_pending_migrations'
+activerecord (7.1.3.2) lib/active_record/migration.rb:644:in `block (2 levels) in call'
+activesupport (7.1.3.2) lib/active_support/file_update_checker.rb:85:in `execute'
+activerecord (7.1.3.2) lib/active_record/migration.rb:649:in `block in call'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `synchronize'
+activerecord (7.1.3.2) lib/active_record/migration.rb:641:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+activesupport (7.1.3.2) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/actionable_exceptions.rb:16:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+web-console (4.2.1) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.1) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.1) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (7.1.3.2) lib/rails/rack/logger.rb:37:in `call_app'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `block in tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:39:in `tagged'
+activesupport (7.1.3.2) lib/active_support/tagged_logging.rb:135:in `tagged'
+activesupport (7.1.3.2) lib/active_support/broadcast_logger.rb:240:in `method_missing'
+railties (7.1.3.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/remote_ip.rb:92:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/request_id.rb:28:in `call'
+rack (3.0.10) lib/rack/method_override.rb:28:in `call'
+rack (3.0.10) lib/rack/runtime.rb:24:in `call'
+activesupport (7.1.3.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:59:in `block in call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:24:in `collect_events'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/server_timing.rb:58:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/static.rb:25:in `call'
+rack (3.0.10) lib/rack/sendfile.rb:114:in `call'
+actionpack (7.1.3.2) lib/action_dispatch/middleware/host_authorization.rb:141:in `call'
+railties (7.1.3.2) lib/rails/engine.rb:536:in `call'
+puma (6.4.2) lib/puma/configuration.rb:272:in `call'
+puma (6.4.2) lib/puma/request.rb:100:in `block in handle_request'
+puma (6.4.2) lib/puma/thread_pool.rb:378:in `with_force_shutdown'
+puma (6.4.2) lib/puma/request.rb:99:in `handle_request'
+puma (6.4.2) lib/puma/server.rb:464:in `process_client'
+puma (6.4.2) lib/puma/server.rb:245:in `block in run'
+puma (6.4.2) lib/puma/thread_pool.rb:155:in `block in spawn_thread'
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT * FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? ORDER BY "ar_internal_metadata"."key" ASC LIMIT 1[0m  [[nil, "environment"]]
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ('environment', 'development', '2024-05-07 12:38:28.437696', '2024-05-07 12:38:28.437698') RETURNING "key"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20240507092750)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar DEFAULT '' NOT NULL, "encrypted_password" varchar DEFAULT '' NOT NULL, "reset_password_token" varchar, "reset_password_sent_at" datetime(6), "remember_created_at" datetime(6), "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240507092750') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateEvents (20240507092951)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "events" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "description" text, "start_date" datetime(6), "duration" integer, "price" decimal, "user_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_0cb5590091"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_events_on_user_id" ON "events" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240507092951') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to CreateAttendances (20240507093005)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mCREATE TABLE "attendances" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer NOT NULL, "event_id" integer NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL, CONSTRAINT "fk_rails_77ad02f5c5"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+, CONSTRAINT "fk_rails_777eb7170a"
+FOREIGN KEY ("event_id")
+  REFERENCES "events" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE INDEX "index_attendances_on_user_id" ON "attendances" ("user_id")[0m
+  [1m[35m (0.0ms)[0m  [1m[35mCREATE INDEX "index_attendances_on_event_id" ON "attendances" ("event_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240507093005') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddAttributesToUsers (20240507110207)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "description" text[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "first_name" varchar[0m
+  [1m[35m (0.1ms)[0m  [1m[35mALTER TABLE "users" ADD "last_name" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240507110207') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+Migrating to AddLocationToEvents (20240507110820)
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "events" ADD "location" varchar[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ('20240507110820') RETURNING "version"[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 14:38:36 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/Xavier/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/Xavier/.rbenv/versions/3.2.2/lib/ruby/gems/3.2.0/gems/railties-7.1.3.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.4ms | Allocations: 373)
+Completed 200 OK in 139ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 284935)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/views/sign_in" for 127.0.0.1 at 2024-05-07 14:45:36 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/views/sign_in"):
+  
+Started GET "/views/passwords/new" for 127.0.0.1 at 2024-05-07 14:46:03 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/views/passwords/new"):
+  
+Started GET "/views/users/sign_in" for 127.0.0.1 at 2024-05-07 14:47:17 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/views/users/sign_in"):
+  
+Started GET "/views/user/sign_in" for 127.0.0.1 at 2024-05-07 14:47:47 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/views/user/sign_in"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-05-07 14:49:39 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.2ms | Allocations: 227)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 527)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 10.4ms | Allocations: 4050)
+  Rendered layout layouts/application.html.erb (Duration: 131.0ms | Allocations: 96717)
+Completed 200 OK in 168ms (Views: 133.7ms | ActiveRecord: 7.5ms | Allocations: 115611)
+
+
+Started GET "/views/user/sign_up" for 127.0.0.1 at 2024-05-07 14:53:19 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/views/user/sign_up"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-05-07 14:53:33 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1709)
+  Rendered layout layouts/application.html.erb (Duration: 11.2ms | Allocations: 2819)
+Completed 200 OK in 33ms (Views: 12.6ms | ActiveRecord: 0.0ms | Allocations: 4396)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-05-07 14:53:46 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.0ms | Allocations: 465)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-05-07 14:53:46 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 115)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 874)
+  Rendered layout layouts/application.html.erb (Duration: 3.5ms | Allocations: 1973)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.0ms | Allocations: 2753)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-05-07 14:53:51 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms | Allocations: 436)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-05-07 14:53:51 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 115)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 874)
+  Rendered layout layouts/application.html.erb (Duration: 4.9ms | Allocations: 1973)
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 2757)
+
+
+Started GET "/passwords/new" for 127.0.0.1 at 2024-05-07 14:54:03 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/passwords/new"):
+  
+Started GET "/users/passwords/new" for 127.0.0.1 at 2024-05-07 14:54:17 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/passwords/new"):
+  
+Started GET "/users/password/new" for 127.0.0.1 at 2024-05-07 14:54:29 +0200
+Processing by Devise::PasswordsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/passwords/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 119)
+  Rendered devise/passwords/new.html.erb within layouts/application (Duration: 3.8ms | Allocations: 876)
+  Rendered layout layouts/application.html.erb (Duration: 6.0ms | Allocations: 1990)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.0ms | Allocations: 3023)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 15:11:47 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.7ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1405)
+  Rendered layout layouts/application.html.erb (Duration: 45.8ms | Allocations: 41477)
+Completed 200 OK in 209ms (Views: 44.5ms | ActiveRecord: 4.3ms | Allocations: 330757)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap"):
+  
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+  [1m[36mEvent Load (0.8ms)[0m  [1m[34mSELECT "events".* FROM "events" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" ORDER BY "events"."id" DESC LIMIT ?[0m  [["LIMIT", 1]]
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+  [1m[36mUser Pluck (0.8ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Pluck (0.1ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mUser Pluck (0.0ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mUser Pluck (0.0ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mUser Pluck (0.0ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "houston_mckenzie@sipes.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.4ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "description", "first_name", "last_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "houston_mckenzie@sipes.example"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-05-07 13:31:04.673176"], ["updated_at", "2024-05-07 13:31:04.673176"], ["description", "Et occaecati repellendus. Ullam laborum aut."], ["first_name", "Stephen"], ["last_name", "Mueller"]]
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.5ms | Allocations: 255)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.6ms | Allocations: 488)
+UserMailer#welcome_email: processed outbound mail in 15.1ms
+Delivered mail 663a2d18b4d78_7d5dfdc704b2@macbook-air-de-xavier.home.mail (41.0ms)
+Date: Tue, 07 May 2024 15:31:04 +0200
+To: houston_mckenzie@sipes.example
+Message-ID: <663a2d18b4d78_7d5dfdc704b2@macbook-air-de-xavier.home.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Type=
+' />
+</head>
+<body>
+  <h1>Bienvenue chez nous !</h1>
+  <p>Bonjour Stephen,</p>
+  <p>Merci de vous =C3=AAtre inscrit sur notre site !</p>
+  <p>Cordialement,</p>
+  <p>L'=C3=A9quipe de notre site</p>
+</body>
+</html>
+  </body>
+</html>
+
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "rudy_keeling@gleason-adams.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.8ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "description", "first_name", "last_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "rudy_keeling@gleason-adams.test"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-05-07 13:31:05.043521"], ["updated_at", "2024-05-07 13:31:05.043521"], ["description", "Qui id iure. Qui consequuntur natus."], ["first_name", "Eli"], ["last_name", "Kuhlman"]]
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.1ms | Allocations: 74)
+UserMailer#welcome_email: processed outbound mail in 0.5ms
+Delivered mail 663a2d19bb37_7d5dfdc705b7@macbook-air-de-xavier.home.mail (1.1ms)
+Date: Tue, 07 May 2024 15:31:05 +0200
+To: rudy_keeling@gleason-adams.test
+Message-ID: <663a2d19bb37_7d5dfdc705b7@macbook-air-de-xavier.home.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Type=
+' />
+</head>
+<body>
+  <h1>Bienvenue chez nous !</h1>
+  <p>Bonjour Eli,</p>
+  <p>Merci de vous =C3=AAtre inscrit sur notre site !</p>
+  <p>Cordialement,</p>
+  <p>L'=C3=A9quipe de notre site</p>
+</body>
+</html>
+  </body>
+</html>
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "ngoc@ortiz.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "description", "first_name", "last_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "ngoc@ortiz.test"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-05-07 13:31:05.311492"], ["updated_at", "2024-05-07 13:31:05.311492"], ["description", "Non dolores velit. Laboriosam voluptate ut."], ["first_name", "Gerald"], ["last_name", "Aufderhar"]]
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.1ms | Allocations: 74)
+UserMailer#welcome_email: processed outbound mail in 0.5ms
+Delivered mail 663a2d194c633_7d5dfdc706e7@macbook-air-de-xavier.home.mail (1.2ms)
+Date: Tue, 07 May 2024 15:31:05 +0200
+To: ngoc@ortiz.test
+Message-ID: <663a2d194c633_7d5dfdc706e7@macbook-air-de-xavier.home.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Type=
+' />
+</head>
+<body>
+  <h1>Bienvenue chez nous !</h1>
+  <p>Bonjour Gerald,</p>
+  <p>Merci de vous =C3=AAtre inscrit sur notre site !</p>
+  <p>Cordialement,</p>
+  <p>L'=C3=A9quipe de notre site</p>
+</body>
+</html>
+  </body>
+</html>
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "carter@buckridge-mckenzie.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "description", "first_name", "last_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "carter@buckridge-mckenzie.test"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-05-07 13:31:05.576068"], ["updated_at", "2024-05-07 13:31:05.576068"], ["description", "Ut optio eius. Fuga nobis ipsam."], ["first_name", "Georgianne"], ["last_name", "Greenholt"]]
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.1ms | Allocations: 74)
+UserMailer#welcome_email: processed outbound mail in 0.5ms
+Delivered mail 663a2d198cf89_7d5dfdc707ba@macbook-air-de-xavier.home.mail (1.2ms)
+Date: Tue, 07 May 2024 15:31:05 +0200
+To: carter@buckridge-mckenzie.test
+Message-ID: <663a2d198cf89_7d5dfdc707ba@macbook-air-de-xavier.home.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Type=
+' />
+</head>
+<body>
+  <h1>Bienvenue chez nous !</h1>
+  <p>Bonjour Georgianne,</p>
+  <p>Merci de vous =C3=AAtre inscrit sur notre site !</p>
+  <p>Cordialement,</p>
+  <p>L'=C3=A9quipe de notre site</p>
+</body>
+</html>
+  </body>
+</html>
+
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "luther@corkery-bruen.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "description", "first_name", "last_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "luther@corkery-bruen.test"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-05-07 13:31:05.848172"], ["updated_at", "2024-05-07 13:31:05.848172"], ["description", "Ab et itaque. Ducimus sed delectus."], ["first_name", "Rusty"], ["last_name", "Waters"]]
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.1ms | Allocations: 74)
+UserMailer#welcome_email: processed outbound mail in 0.5ms
+Delivered mail 663a2d19cf676_7d5dfdc708c9@macbook-air-de-xavier.home.mail (1.3ms)
+Date: Tue, 07 May 2024 15:31:05 +0200
+To: luther@corkery-bruen.test
+Message-ID: <663a2d19cf676_7d5dfdc708c9@macbook-air-de-xavier.home.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Type=
+' />
+</head>
+<body>
+  <h1>Bienvenue chez nous !</h1>
+  <p>Bonjour Rusty,</p>
+  <p>Merci de vous =C3=AAtre inscrit sur notre site !</p>
+  <p>Cordialement,</p>
+  <p>L'=C3=A9quipe de notre site</p>
+</body>
+</html>
+  </body>
+</html>
+
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "shaquana@pfannerstill-dietrich.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "description", "first_name", "last_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "shaquana@pfannerstill-dietrich.test"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-05-07 13:31:06.125817"], ["updated_at", "2024-05-07 13:31:06.125817"], ["description", "Qui voluptatum sapiente. Deserunt fugiat quam."], ["first_name", "Junko"], ["last_name", "Ankunding"]]
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.1ms | Allocations: 74)
+UserMailer#welcome_email: processed outbound mail in 0.5ms
+Delivered mail 663a2d1a1f130_7d5dfdc709a2@macbook-air-de-xavier.home.mail (1.4ms)
+Date: Tue, 07 May 2024 15:31:06 +0200
+To: shaquana@pfannerstill-dietrich.test
+Message-ID: <663a2d1a1f130_7d5dfdc709a2@macbook-air-de-xavier.home.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Type=
+' />
+</head>
+<body>
+  <h1>Bienvenue chez nous !</h1>
+  <p>Bonjour Junko,</p>
+  <p>Merci de vous =C3=AAtre inscrit sur notre site !</p>
+  <p>Cordialement,</p>
+  <p>L'=C3=A9quipe de notre site</p>
+</body>
+</html>
+  </body>
+</html>
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "issac_mills@wintheiser-funk.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "description", "first_name", "last_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "issac_mills@wintheiser-funk.example"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-05-07 13:31:06.389823"], ["updated_at", "2024-05-07 13:31:06.389823"], ["description", "Deleniti aperiam repudiandae. Placeat temporibus ducimus."], ["first_name", "Carlo"], ["last_name", "Casper"]]
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.1ms | Allocations: 74)
+UserMailer#welcome_email: processed outbound mail in 0.5ms
+Delivered mail 663a2d1a5f824_7d5dfdc71052@macbook-air-de-xavier.home.mail (1.2ms)
+Date: Tue, 07 May 2024 15:31:06 +0200
+To: issac_mills@wintheiser-funk.example
+Message-ID: <663a2d1a5f824_7d5dfdc71052@macbook-air-de-xavier.home.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Type=
+' />
+</head>
+<body>
+  <h1>Bienvenue chez nous !</h1>
+  <p>Bonjour Carlo,</p>
+  <p>Merci de vous =C3=AAtre inscrit sur notre site !</p>
+  <p>Cordialement,</p>
+  <p>L'=C3=A9quipe de notre site</p>
+</body>
+</html>
+  </body>
+</html>
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "vernon@rau-hartmann.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "description", "first_name", "last_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "vernon@rau-hartmann.example"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-05-07 13:31:06.653562"], ["updated_at", "2024-05-07 13:31:06.653562"], ["description", "Voluptatem nostrum modi. Expedita ut porro."], ["first_name", "Van"], ["last_name", "Hayes"]]
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.1ms | Allocations: 74)
+UserMailer#welcome_email: processed outbound mail in 0.6ms
+Delivered mail 663a2d1a9fea6_7d5dfdc711ee@macbook-air-de-xavier.home.mail (1.4ms)
+Date: Tue, 07 May 2024 15:31:06 +0200
+To: vernon@rau-hartmann.example
+Message-ID: <663a2d1a9fea6_7d5dfdc711ee@macbook-air-de-xavier.home.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Type=
+' />
+</head>
+<body>
+  <h1>Bienvenue chez nous !</h1>
+  <p>Bonjour Van,</p>
+  <p>Merci de vous =C3=AAtre inscrit sur notre site !</p>
+  <p>Cordialement,</p>
+  <p>L'=C3=A9quipe de notre site</p>
+</body>
+</html>
+  </body>
+</html>
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "winford@brakus.example"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "description", "first_name", "last_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "winford@brakus.example"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-05-07 13:31:06.918191"], ["updated_at", "2024-05-07 13:31:06.918191"], ["description", "Esse laboriosam ut. Ipsam ad eius."], ["first_name", "Nga"], ["last_name", "Kling"]]
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.1ms | Allocations: 74)
+UserMailer#welcome_email: processed outbound mail in 0.6ms
+Delivered mail 663a2d1ae08a2_7d5dfdc7125@macbook-air-de-xavier.home.mail (1.4ms)
+Date: Tue, 07 May 2024 15:31:06 +0200
+To: winford@brakus.example
+Message-ID: <663a2d1ae08a2_7d5dfdc7125@macbook-air-de-xavier.home.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Type=
+' />
+</head>
+<body>
+  <h1>Bienvenue chez nous !</h1>
+  <p>Bonjour Nga,</p>
+  <p>Merci de vous =C3=AAtre inscrit sur notre site !</p>
+  <p>Cordialement,</p>
+  <p>L'=C3=A9quipe de notre site</p>
+</body>
+</html>
+  </body>
+</html>
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "sung@jast.test"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "description", "first_name", "last_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "sung@jast.test"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-05-07 13:31:07.182452"], ["updated_at", "2024-05-07 13:31:07.182452"], ["description", "Autem eligendi veritatis. Sit aut tenetur."], ["first_name", "Cruz"], ["last_name", "Dickinson"]]
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.1ms | Allocations: 74)
+UserMailer#welcome_email: processed outbound mail in 0.6ms
+Delivered mail 663a2d1b2ce79_7d5dfdc71376@macbook-air-de-xavier.home.mail (1.3ms)
+Date: Tue, 07 May 2024 15:31:07 +0200
+To: sung@jast.test
+Message-ID: <663a2d1b2ce79_7d5dfdc71376@macbook-air-de-xavier.home.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Type=
+' />
+</head>
+<body>
+  <h1>Bienvenue chez nous !</h1>
+  <p>Bonjour Cruz,</p>
+  <p>Merci de vous =C3=AAtre inscrit sur notre site !</p>
+  <p>Cordialement,</p>
+  <p>L'=C3=A9quipe de notre site</p>
+</body>
+</html>
+  </body>
+</html>
+
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Pluck (0.0ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEvent Create (0.1ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "start_date", "duration", "price", "user_id", "created_at", "updated_at", "location") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Architecto eos rerum quibusdam."], ["description", "Nostrum neque odio. Perferendis quos delectus. Aperiam ullam corrupti. Quos accusamus dolorum."], ["start_date", "2024-05-18 07:07:51"], ["duration", 11], ["price", 80.0], ["user_id", 10], ["created_at", "2024-05-07 13:31:07.199716"], ["updated_at", "2024-05-07 13:31:07.199716"], ["location", "Apt. 529 70243 Ozzie Estates, Dachport, AR 67223"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Pluck (0.0ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  [1m[36mEvent Create (0.0ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "start_date", "duration", "price", "user_id", "created_at", "updated_at", "location") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Harum iusto ut possimus."], ["description", "Rem minus tempore. Est est eum. Molestiae sunt qui. Autem libero et."], ["start_date", "2024-06-05 07:32:29"], ["duration", 13], ["price", 72.0], ["user_id", 9], ["created_at", "2024-05-07 13:31:07.202677"], ["updated_at", "2024-05-07 13:31:07.202677"], ["location", "79781 Hettinger Burg, Lake Patricia, TX 22536-9648"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Pluck (0.0ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  [1m[36mEvent Create (0.0ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "start_date", "duration", "price", "user_id", "created_at", "updated_at", "location") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Officia non mollitia sapiente."], ["description", "Sed iusto corrupti. Nobis ut et. Fuga illum modi. Et ipsum voluptate."], ["start_date", "2024-05-12 07:28:40"], ["duration", 18], ["price", 20.0], ["user_id", 4], ["created_at", "2024-05-07 13:31:07.205076"], ["updated_at", "2024-05-07 13:31:07.205076"], ["location", "Apt. 861 6045 DuBuque Plaza, Delilahborough, OH 26573"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Pluck (0.0ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  [1m[36mEvent Create (0.0ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "start_date", "duration", "price", "user_id", "created_at", "updated_at", "location") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Fuga vitae fugit veritatis."], ["description", "Id at quam. Minus commodi blanditiis. Delectus aperiam aliquid. Iusto deserunt dignissimos."], ["start_date", "2024-05-24 08:15:57"], ["duration", 5], ["price", 42.0], ["user_id", 10], ["created_at", "2024-05-07 13:31:07.207584"], ["updated_at", "2024-05-07 13:31:07.207584"], ["location", "Suite 729 82970 Paul Hills, Marioton, WY 31214"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mUser Pluck (0.0ms)[0m  [1m[34mSELECT "users"."id" FROM "users"[0m
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 7], ["LIMIT", 1]]
+  [1m[36mEvent Create (0.0ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "start_date", "duration", "price", "user_id", "created_at", "updated_at", "location") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["title", "Nostrum necessitatibus nobis temporibus."], ["description", "Laborum et aliquam. Ut modi explicabo. Doloribus quaerat enim. Aut temporibus repudiandae."], ["start_date", "2024-05-20 04:58:42"], ["duration", 13], ["price", 26.0], ["user_id", 7], ["created_at", "2024-05-07 13:31:07.210056"], ["updated_at", "2024-05-07 13:31:07.210056"], ["location", "Suite 256 63308 May Mission, East Rupertfurt, IN 42391-6813"]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mcommit transaction[0m
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 15:31:17 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 16141)
+  Rendered layout layouts/application.html.erb (Duration: 35.0ms | Allocations: 49849)
+Completed 200 OK in 185ms (Views: 34.0ms | ActiveRecord: 4.0ms | Allocations: 337147)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap"):
+  
+Started GET "/events/1" for 127.0.0.1 at 2024-05-07 15:31:30 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (20.0ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:67:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/_event.html.erb (Duration: 6.0ms | Allocations: 427)
+  Rendered events/show.html.erb within layouts/application (Duration: 34.6ms | Allocations: 1631)
+  Rendered layout layouts/application.html.erb (Duration: 37.0ms | Allocations: 2741)
+Completed 200 OK in 73ms (Views: 38.1ms | ActiveRecord: 19.9ms | Allocations: 5421)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap"):
+  
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 15:36:01 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 16141)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 18594)
+Completed 200 OK in 182ms (Views: 18.5ms | ActiveRecord: 1.7ms | Allocations: 305901)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2024-05-07 15:36:09 +0200
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 28.3ms | Allocations: 3901)
+  Rendered events/new.html.erb within layouts/application (Duration: 33.2ms | Allocations: 4220)
+  Rendered layout layouts/application.html.erb (Duration: 33.8ms | Allocations: 4514)
+Completed 200 OK in 49ms (Views: 35.3ms | ActiveRecord: 0.0ms | Allocations: 4889)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 15:36:51 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 10.8ms | Allocations: 680)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 1320)
+Completed 200 OK in 20ms (Views: 17.0ms | ActiveRecord: 0.5ms | Allocations: 1593)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2024-05-07 15:36:58 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:67:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/_event.html.erb (Duration: 6.8ms | Allocations: 405)
+  Rendered events/show.html.erb within layouts/application (Duration: 19.8ms | Allocations: 1476)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 1770)
+Completed 200 OK in 66ms (Views: 23.1ms | ActiveRecord: 0.6ms | Allocations: 6698)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-05-07 15:37:04 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 220)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 522)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 2745)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3048)
+Completed 200 OK in 55ms (Views: 8.3ms | ActiveRecord: 1.2ms | Allocations: 15120)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2024-05-07 15:37:09 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 0.4ms | Allocations: 134)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 1442)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 1714)
+Completed 200 OK in 23ms (Views: 17.0ms | ActiveRecord: 0.0ms | Allocations: 3002)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2024-05-07 15:38:32 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (20.1ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:67:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/_event.html.erb (Duration: 8.3ms | Allocations: 43)
+  Rendered events/show.html.erb within layouts/application (Duration: 56.3ms | Allocations: 642)
+  Rendered layout layouts/application.html.erb (Duration: 56.8ms | Allocations: 936)
+Completed 200 OK in 96ms (Views: 57.6ms | ActiveRecord: 20.1ms | Allocations: 1568)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-05-07 15:41:03 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.1ms | Allocations: 896)
+  Rendered layout layouts/application.html.erb (Duration: 1.3ms | Allocations: 1164)
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.0ms | Allocations: 1888)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-05-07 15:41:30 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"xavier.kerleau@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (5.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "xavier.kerleau@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 1140)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2040)
+  Rendered layout layouts/application.html.erb (Duration: 2.2ms | Allocations: 2308)
+Completed 422 Unprocessable Entity in 302ms (Views: 2.5ms | ActiveRecord: 7.4ms | Allocations: 9527)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/users" for 127.0.0.1 at 2024-05-07 16:08:35 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:08:52 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 46.1ms | Allocations: 16010)
+  Rendered layout layouts/application.html.erb (Duration: 52.1ms | Allocations: 17247)
+Completed 200 OK in 95ms (Views: 23.4ms | ActiveRecord: 31.7ms | Allocations: 22462)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-05-07 16:08:55 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 227)
+  Rendered devise/shared/_links.html.erb (Duration: 0.5ms | Allocations: 527)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 7.3ms | Allocations: 3896)
+  Rendered layout layouts/application.html.erb (Duration: 7.8ms | Allocations: 4199)
+Completed 200 OK in 25ms (Views: 10.2ms | ActiveRecord: 0.4ms | Allocations: 16272)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-05-07 16:09:12 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Xavier", "last_name"=>"Kerleau", "email"=>"xavier.kerleau@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :first_name, :last_name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x0000000107417640>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Xavier", "last_name"=>"Kerleau", "email"=>"xavier.kerleau@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (2.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "xavier.kerleau@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.9ms | Allocations: 1147)
+  Rendered devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 70)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.9ms | Allocations: 3316)
+  Rendered layout layouts/application.html.erb (Duration: 3.3ms | Allocations: 3584)
+Completed 422 Unprocessable Entity in 308ms (Views: 3.7ms | ActiveRecord: 2.9ms | Allocations: 12148)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:10:48 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 16147)
+  Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 18621)
+Completed 200 OK in 174ms (Views: 17.3ms | ActiveRecord: 1.7ms | Allocations: 305921)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-05-07 16:10:50 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 231)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 522)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.3ms | Allocations: 4038)
+  Rendered layout layouts/application.html.erb (Duration: 8.7ms | Allocations: 4341)
+Completed 200 OK in 34ms (Views: 10.7ms | ActiveRecord: 1.5ms | Allocations: 16437)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-05-07 16:11:04 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Xavier", "last_name"=>"Kerleau", "email"=>"xavier.kerleau@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :first_name, :last_name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x0000000109a467d0>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"Xavier", "last_name"=>"Kerleau", "email"=>"xavier.kerleau@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (1.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "xavier.kerleau@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.8ms | Allocations: 814)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2973)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 3241)
+Completed 422 Unprocessable Entity in 301ms (Views: 2.9ms | ActiveRecord: 1.9ms | Allocations: 12144)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:12:27 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 9.6ms | Allocations: 16141)
+  Rendered layout layouts/application.html.erb (Duration: 14.9ms | Allocations: 18600)
+Completed 200 OK in 178ms (Views: 16.2ms | ActiveRecord: 1.5ms | Allocations: 305900)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-05-07 16:12:30 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 231)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 523)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.4ms | Allocations: 3930)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 4233)
+Completed 200 OK in 54ms (Views: 11.1ms | ActiveRecord: 0.7ms | Allocations: 16332)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-05-07 16:12:42 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"xavier", "last_name"=>"kerleau", "email"=>"xavier.kerleau@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameters: :first_name, :last_name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x0000000114316680>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"xavier", "last_name"=>"kerleau", "email"=>"xavier.kerleau@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "xavier.kerleau@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.0ms)[0m  [1m[31mrollback transaction[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 814)
+  Rendered devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 70)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 2946)
+  Rendered layout layouts/application.html.erb (Duration: 2.4ms | Allocations: 3214)
+Completed 422 Unprocessable Entity in 296ms (Views: 2.7ms | ActiveRecord: 1.1ms | Allocations: 12138)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:17:47 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 16141)
+  Rendered layout layouts/application.html.erb (Duration: 17.0ms | Allocations: 18600)
+Completed 200 OK in 186ms (Views: 18.7ms | ActiveRecord: 1.3ms | Allocations: 306769)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2024-05-07 16:17:50 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.4ms | Allocations: 231)
+  Rendered devise/shared/_links.html.erb (Duration: 0.7ms | Allocations: 523)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.0ms | Allocations: 3927)
+  Rendered layout layouts/application.html.erb (Duration: 8.4ms | Allocations: 4230)
+Completed 200 OK in 25ms (Views: 10.7ms | ActiveRecord: 0.3ms | Allocations: 16473)
+
+
+Started POST "/users" for 127.0.0.1 at 2024-05-07 16:18:06 +0200
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"first_name"=>"xavier", "last_name"=>"kerleau", "email"=>"xavier.kerleau@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "xavier.kerleau@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.1ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "created_at", "updated_at", "description", "first_name", "last_name") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) RETURNING "id"[0m  [["email", "xavier.kerleau@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["created_at", "2024-05-07 14:18:06.349204"], ["updated_at", "2024-05-07 14:18:06.349204"], ["description", nil], ["first_name", "xavier"], ["last_name", "kerleau"]]
+  Rendering layout layouts/mailer.html.erb
+  Rendering user_mailer/welcome_email.html.erb within layouts/mailer
+  Rendered user_mailer/welcome_email.html.erb within layouts/mailer (Duration: 0.2ms | Allocations: 149)
+  Rendered layout layouts/mailer.html.erb (Duration: 0.4ms | Allocations: 367)
+UserMailer#welcome_email: processed outbound mail in 4.2ms
+Delivered mail 663a381e5ca33_7fba3d2c3138@macbook-air-de-xavier.home.mail (6.8ms)
+Date: Tue, 07 May 2024 16:18:06 +0200
+To: xavier.kerleau@gmail.com
+Message-ID: <663a381e5ca33_7fba3d2c3138@macbook-air-de-xavier.home.mail>
+Subject: Bienvenue chez nous !
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf=
+-8">
+    <style>
+      /* Email styles need to be inline */
+    </style>
+  </head>
+
+  <body>
+    <!DOCTYPE html>
+<html>
+<head>
+  <meta content=3D'text/html; charset=3DUTF-8' http-equiv=3D'Content-Type=
+' />
+</head>
+<body>
+  <h1>Bienvenue chez nous !</h1>
+  <p>Bonjour xavier,</p>
+  <p>Merci de vous =C3=AAtre inscrit sur notre site !</p>
+  <p>Cordialement,</p>
+  <p>L'=C3=A9quipe de notre site</p>
+</body>
+</html>
+  </body>
+</html>
+
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[36mcommit transaction[0m
+Redirected to http://localhost:3000/users/edit
+Completed 303 See Other in 331ms (ActiveRecord: 2.6ms | Allocations: 31010)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-05-07 16:18:06 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 13)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 1.3ms | Allocations: 1703)
+  Rendered layout layouts/application.html.erb (Duration: 1.7ms | Allocations: 2930)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.1ms | Allocations: 5140)
+
+
+  
+ActionView::Template::Error (undefined method `user_path' for #<ActionView::Base:0x0000000000d098>):
+    32:               Mon profil
+    33:             </a>
+    34:             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+    35:               <%= link_to "Mon profil", current_user, class: "dropdown-item" %>
+    36:               <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+    37:             </div>
+    38:           </li>
+  
+app/views/layouts/application.html.erb:35
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:21:06 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 12.5ms | Allocations: 16141)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 25.1ms | Allocations: 31785)
+Completed 200 OK in 182ms (Views: 26.4ms | ActiveRecord: 1.9ms | Allocations: 319953)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:21:09 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+Started GET "/users/edit" for 127.0.0.1 at 2024-05-07 16:21:14 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 227)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 10.3ms | Allocations: 3254)
+  Rendered layout layouts/application.html.erb (Duration: 10.7ms | Allocations: 3524)
+Completed 200 OK in 17ms (Views: 13.2ms | ActiveRecord: 0.1ms | Allocations: 6141)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:21:32 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:24:41 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 16141)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:29
+  Rendered layout layouts/application.html.erb (Duration: 21.3ms | Allocations: 31809)
+Completed 200 OK in 179ms (Views: 22.6ms | ActiveRecord: 1.9ms | Allocations: 319978)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-05-07 16:24:43 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 231)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 5.9ms | Allocations: 3402)
+  Rendered layout layouts/application.html.erb (Duration: 6.3ms | Allocations: 3672)
+Completed 200 OK in 12ms (Views: 8.2ms | ActiveRecord: 0.1ms | Allocations: 6266)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:24:45 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:26:38 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 9.9ms | Allocations: 16147)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 37.5ms | Allocations: 51169)
+Completed 200 OK in 193ms (Views: 39.1ms | ActiveRecord: 1.5ms | Allocations: 339336)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:26:40 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:28:08 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 9.8ms | Allocations: 16141)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 34.7ms | Allocations: 51160)
+Completed 200 OK in 206ms (Views: 36.2ms | ActiveRecord: 2.0ms | Allocations: 339331)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:28:11 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:30:30 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 16141)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 51181)
+Completed 200 OK in 185ms (Views: 33.9ms | ActiveRecord: 2.7ms | Allocations: 339347)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:30:33 +0200
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:34:19 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (11.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 26.4ms | Allocations: 681)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 77.4ms | Allocations: 3342)
+Completed 200 OK in 82ms (Views: 67.4ms | ActiveRecord: 11.8ms | Allocations: 3616)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-05-07 16:34:21 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.3ms | Allocations: 229)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 42.5ms | Allocations: 3254)
+  Rendered layout layouts/application.html.erb (Duration: 44.1ms | Allocations: 5036)
+Completed 200 OK in 53ms (Views: 47.1ms | ActiveRecord: 0.1ms | Allocations: 7624)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2024-05-07 16:34:24 +0200
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 16.3ms | Allocations: 2844)
+  Rendered events/new.html.erb within layouts/application (Duration: 19.9ms | Allocations: 3127)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 37.8ms | Allocations: 5427)
+Completed 200 OK in 42ms (Views: 38.8ms | ActiveRecord: 0.1ms | Allocations: 5804)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:35:11 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 7.1ms | Allocations: 5469)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 15.7ms | Allocations: 13337)
+Completed 200 OK in 20ms (Views: 10.7ms | ActiveRecord: 5.9ms | Allocations: 17093)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2024-05-07 16:35:13 +0200
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 6.0ms | Allocations: 2136)
+  Rendered events/new.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2413)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 13.1ms | Allocations: 4710)
+Completed 200 OK in 16ms (Views: 13.8ms | ActiveRecord: 0.1ms | Allocations: 5058)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:35:21 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 5.5ms | Allocations: 673)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 22.0ms | Allocations: 3363)
+Completed 200 OK in 27ms (Views: 25.3ms | ActiveRecord: 0.7ms | Allocations: 3630)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:36:01 +0200
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:37:04 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 10.7ms | Allocations: 16141)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 41.6ms | Allocations: 51059)
+Completed 200 OK in 224ms (Views: 41.0ms | ActiveRecord: 3.9ms | Allocations: 339225)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:37:09 +0200
+  
+ActionController::RoutingError (No route matches [GET] "/users/sign_out"):
+  
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:39:28 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 12.8ms | Allocations: 16141)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 42.4ms | Allocations: 51110)
+Completed 200 OK in 217ms (Views: 42.6ms | ActiveRecord: 3.1ms | Allocations: 339276)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:39:30 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+Completed 404 Not Found in 11ms (ActiveRecord: 0.6ms | Allocations: 3079)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=sign_out):
+  
+app/controllers/users_controller.rb:5:in `show'
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:40:30 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 9.2ms | Allocations: 16141)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 41.1ms | Allocations: 50819)
+Completed 200 OK in 227ms (Views: 42.6ms | ActiveRecord: 1.7ms | Allocations: 338985)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:40:33 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+Redirected to http://localhost:3000/
+Completed 302 Found in 4ms (ActiveRecord: 0.4ms | Allocations: 1764)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:40:33 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 673)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 38.3ms | Allocations: 3315)
+Completed 200 OK in 45ms (Views: 41.0ms | ActiveRecord: 0.3ms | Allocations: 3583)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:40:36 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+Redirected to http://localhost:3000/
+Completed 302 Found in 9ms (ActiveRecord: 0.2ms | Allocations: 887)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:40:36 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 672)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 7.0ms | Allocations: 3332)
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 3598)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:40:42 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+Redirected to http://localhost:3000/
+Completed 302 Found in 8ms (ActiveRecord: 0.4ms | Allocations: 886)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:40:42 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 672)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 3.8ms | Allocations: 3372)
+Completed 200 OK in 4ms (Views: 3.9ms | ActiveRecord: 0.1ms | Allocations: 3640)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:40:56 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+Redirected to http://localhost:3000/
+Completed 302 Found in 29ms (ActiveRecord: 2.9ms | Allocations: 892)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:40:56 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 2.4ms | Allocations: 672)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 3320)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms | Allocations: 3586)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2024-05-07 16:41:07 +0200
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 52.3ms | Allocations: 6266)
+  Rendered events/new.html.erb within layouts/application (Duration: 55.2ms | Allocations: 6589)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 59.7ms | Allocations: 8881)
+Completed 200 OK in 64ms (Views: 60.6ms | ActiveRecord: 0.1ms | Allocations: 9245)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:42:41 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 10.2ms | Allocations: 16141)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 18051)
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 1.3ms | Allocations: 306194)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+<head>
+  <title>Votre titre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Events App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "Accueil", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Créer un événement", new_event_path, class: "nav-link" %>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Mon profil
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
+              <%= button_to "Se déconnecter", destroy_user_session_path, method: :delete, data: {turbo_method: :delete}, class "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              S'inscrire / Se connecter
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "S'inscrire", new_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Se connecter", new_user_session_path, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<%= yield %>
+
+<!-- Bootstrap JS et jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:    <head>
+4:      <title>Votre titre</title>
+5:      <meta name="viewport" content="width=device-width, initial-scale=1">
+6:      <!-- Bootstrap CSS -->
+7:      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+8:      <%= csrf_meta_tags %>
+9:      <%= csp_meta_tag %>
+10:      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+11:    </head>
+12:    <body>
+13:    
+14:    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+15:      <div class="container">
+16:        <a class="navbar-brand" href="#">Events App</a>
+17:        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+18:          <span class="navbar-toggler-icon"></span>
+19:        </button>
+20:        <div class="collapse navbar-collapse" id="navbarNav">
+21:          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+22:            <li class="nav-item">
+23:              <%= link_to "Accueil", root_path, class: "nav-link" %>
+24:            </li>
+25:            <li class="nav-item">
+26:              <%= link_to "Créer un événement", new_event_path, class: "nav-link" %>
+27:            </li>
+28:          </ul>
+29:          <ul class="navbar-nav">
+30:            <% if user_signed_in? %>
+31:              <li class="nav-item dropdown">
+32:                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+33:                  Mon profil
+34:                </a>
+35:                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+36:                  <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
+37:                  <%= button_to "Se déconnecter", destroy_user_session_path, method: :delete, data: {turbo_method: :delete}, class "dropdown-item" %>
+38:                </div>
+39:              </li>
+40:            <% else %>
+41:              <li class="nav-item dropdown">
+42:                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+43:                  S'inscrire / Se connecter
+44:                </a>
+45:                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+46:                  <%= link_to "S'inscrire", new_user_registration_path, class: "dropdown-item" %>
+47:                  <%= link_to "Se connecter", new_user_session_path, class: "dropdown-item" %>
+48:                </div>
+49:              </li>
+50:            <% end %>
+51:          </ul>
+52:        </div>
+53:      </div>
+54:    </nav>
+55:    
+56:    <%= yield %>
+57:    
+58:    <!-- Bootstrap JS et jQuery -->
+59:    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+60:    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+61:    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+62:    
+63:    </body>
+64:    </html>
+  
+app/views/layouts/application.html.erb:37: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:43:12 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 16141)
+  Rendered layout layouts/application.html.erb (Duration: 10.8ms | Allocations: 18051)
+Completed 500 Internal Server Error in 174ms (ActiveRecord: 1.3ms | Allocations: 306194)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+<head>
+  <title>Votre titre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Events App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "Accueil", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Créer un événement", new_event_path, class: "nav-link" %>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Mon profil
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
+              <%= button_to "Se déconnecter", destroy_user_session_path, data: {turbo_method: :delete}, class "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              S'inscrire / Se connecter
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "S'inscrire", new_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Se connecter", new_user_session_path, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<%= yield %>
+
+<!-- Bootstrap JS et jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:    <head>
+4:      <title>Votre titre</title>
+5:      <meta name="viewport" content="width=device-width, initial-scale=1">
+6:      <!-- Bootstrap CSS -->
+7:      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+8:      <%= csrf_meta_tags %>
+9:      <%= csp_meta_tag %>
+10:      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+11:    </head>
+12:    <body>
+13:    
+14:    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+15:      <div class="container">
+16:        <a class="navbar-brand" href="#">Events App</a>
+17:        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+18:          <span class="navbar-toggler-icon"></span>
+19:        </button>
+20:        <div class="collapse navbar-collapse" id="navbarNav">
+21:          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+22:            <li class="nav-item">
+23:              <%= link_to "Accueil", root_path, class: "nav-link" %>
+24:            </li>
+25:            <li class="nav-item">
+26:              <%= link_to "Créer un événement", new_event_path, class: "nav-link" %>
+27:            </li>
+28:          </ul>
+29:          <ul class="navbar-nav">
+30:            <% if user_signed_in? %>
+31:              <li class="nav-item dropdown">
+32:                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+33:                  Mon profil
+34:                </a>
+35:                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+36:                  <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
+37:                  <%= button_to "Se déconnecter", destroy_user_session_path, data: {turbo_method: :delete}, class "dropdown-item" %>
+38:                </div>
+39:              </li>
+40:            <% else %>
+41:              <li class="nav-item dropdown">
+42:                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+43:                  S'inscrire / Se connecter
+44:                </a>
+45:                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+46:                  <%= link_to "S'inscrire", new_user_registration_path, class: "dropdown-item" %>
+47:                  <%= link_to "Se connecter", new_user_session_path, class: "dropdown-item" %>
+48:                </div>
+49:              </li>
+50:            <% end %>
+51:          </ul>
+52:        </div>
+53:      </div>
+54:    </nav>
+55:    
+56:    <%= yield %>
+57:    
+58:    <!-- Bootstrap JS et jQuery -->
+59:    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+60:    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+61:    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+62:    
+63:    </body>
+64:    </html>
+  
+app/views/layouts/application.html.erb:37: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:43:38 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 9.0ms | Allocations: 16141)
+  Rendered layout layouts/application.html.erb (Duration: 10.2ms | Allocations: 18051)
+Completed 500 Internal Server Error in 156ms (ActiveRecord: 1.3ms | Allocations: 306194)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+<head>
+  <title>Votre titre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Events App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "Accueil", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Créer un événement", new_event_path, class: "nav-link" %>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Mon profil
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Se déconnecter", destroy_user_session_path, data: {turbo_method: :delete}, class "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              S'inscrire / Se connecter
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "S'inscrire", new_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Se connecter", new_user_session_path, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<%= yield %>
+
+<!-- Bootstrap JS et jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:    <head>
+4:      <title>Votre titre</title>
+5:      <meta name="viewport" content="width=device-width, initial-scale=1">
+6:      <!-- Bootstrap CSS -->
+7:      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+8:      <%= csrf_meta_tags %>
+9:      <%= csp_meta_tag %>
+10:      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+11:    </head>
+12:    <body>
+13:    
+14:    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+15:      <div class="container">
+16:        <a class="navbar-brand" href="#">Events App</a>
+17:        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+18:          <span class="navbar-toggler-icon"></span>
+19:        </button>
+20:        <div class="collapse navbar-collapse" id="navbarNav">
+21:          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+22:            <li class="nav-item">
+23:              <%= link_to "Accueil", root_path, class: "nav-link" %>
+24:            </li>
+25:            <li class="nav-item">
+26:              <%= link_to "Créer un événement", new_event_path, class: "nav-link" %>
+27:            </li>
+28:          </ul>
+29:          <ul class="navbar-nav">
+30:            <% if user_signed_in? %>
+31:              <li class="nav-item dropdown">
+32:                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+33:                  Mon profil
+34:                </a>
+35:                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+36:                  <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
+37:                  <%= link_to "Se déconnecter", destroy_user_session_path, data: {turbo_method: :delete}, class "dropdown-item" %>
+38:                </div>
+39:              </li>
+40:            <% else %>
+41:              <li class="nav-item dropdown">
+42:                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+43:                  S'inscrire / Se connecter
+44:                </a>
+45:                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+46:                  <%= link_to "S'inscrire", new_user_registration_path, class: "dropdown-item" %>
+47:                  <%= link_to "Se connecter", new_user_session_path, class: "dropdown-item" %>
+48:                </div>
+49:              </li>
+50:            <% end %>
+51:          </ul>
+52:        </div>
+53:      </div>
+54:    </nav>
+55:    
+56:    <%= yield %>
+57:    
+58:    <!-- Bootstrap JS et jQuery -->
+59:    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+60:    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+61:    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+62:    
+63:    </body>
+64:    </html>
+  
+app/views/layouts/application.html.erb:37: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:45:29 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 12.6ms | Allocations: 16147)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 18057)
+Completed 500 Internal Server Error in 185ms (ActiveRecord: 1.4ms | Allocations: 306200)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+<head>
+  <title>Votre titre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Events App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "Accueil", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Créer un événement", new_event_path, class: "nav-link" %>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Mon profil
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, data: {turbo_method: :delete}, class "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              S'inscrire / Se connecter
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "S'inscrire", new_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Se connecter", new_user_session_path, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<%= yield %>
+
+<!-- Bootstrap JS et jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:    <head>
+4:      <title>Votre titre</title>
+5:      <meta name="viewport" content="width=device-width, initial-scale=1">
+6:      <!-- Bootstrap CSS -->
+7:      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+8:      <%= csrf_meta_tags %>
+9:      <%= csp_meta_tag %>
+10:      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+11:    </head>
+12:    <body>
+13:    
+14:    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+15:      <div class="container">
+16:        <a class="navbar-brand" href="#">Events App</a>
+17:        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+18:          <span class="navbar-toggler-icon"></span>
+19:        </button>
+20:        <div class="collapse navbar-collapse" id="navbarNav">
+21:          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+22:            <li class="nav-item">
+23:              <%= link_to "Accueil", root_path, class: "nav-link" %>
+24:            </li>
+25:            <li class="nav-item">
+26:              <%= link_to "Créer un événement", new_event_path, class: "nav-link" %>
+27:            </li>
+28:          </ul>
+29:          <ul class="navbar-nav">
+30:            <% if user_signed_in? %>
+31:              <li class="nav-item dropdown">
+32:                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+33:                  Mon profil
+34:                </a>
+35:                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+36:                  <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
+37:                  <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, data: {turbo_method: :delete}, class "dropdown-item" %>
+38:                </div>
+39:              </li>
+40:            <% else %>
+41:              <li class="nav-item dropdown">
+42:                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+43:                  S'inscrire / Se connecter
+44:                </a>
+45:                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+46:                  <%= link_to "S'inscrire", new_user_registration_path, class: "dropdown-item" %>
+47:                  <%= link_to "Se connecter", new_user_session_path, class: "dropdown-item" %>
+48:                </div>
+49:              </li>
+50:            <% end %>
+51:          </ul>
+52:        </div>
+53:      </div>
+54:    </nav>
+55:    
+56:    <%= yield %>
+57:    
+58:    <!-- Bootstrap JS et jQuery -->
+59:    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+60:    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+61:    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+62:    
+63:    </body>
+64:    </html>
+  
+app/views/layouts/application.html.erb:37: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:45:32 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 22.6ms | Allocations: 681)
+  Rendered layout layouts/application.html.erb (Duration: 25.2ms | Allocations: 2162)
+Completed 500 Internal Server Error in 36ms (ActiveRecord: 0.6ms | Allocations: 2444)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+<head>
+  <title>Votre titre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Events App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "Accueil", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Créer un événement", new_event_path, class: "nav-link" %>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Mon profil
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, data: {turbo_method: :delete}, class "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              S'inscrire / Se connecter
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "S'inscrire", new_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Se connecter", new_user_session_path, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<%= yield %>
+
+<!-- Bootstrap JS et jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:    <head>
+4:      <title>Votre titre</title>
+5:      <meta name="viewport" content="width=device-width, initial-scale=1">
+6:      <!-- Bootstrap CSS -->
+7:      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+8:      <%= csrf_meta_tags %>
+9:      <%= csp_meta_tag %>
+10:      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+11:    </head>
+12:    <body>
+13:    
+14:    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+15:      <div class="container">
+16:        <a class="navbar-brand" href="#">Events App</a>
+17:        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+18:          <span class="navbar-toggler-icon"></span>
+19:        </button>
+20:        <div class="collapse navbar-collapse" id="navbarNav">
+21:          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+22:            <li class="nav-item">
+23:              <%= link_to "Accueil", root_path, class: "nav-link" %>
+24:            </li>
+25:            <li class="nav-item">
+26:              <%= link_to "Créer un événement", new_event_path, class: "nav-link" %>
+27:            </li>
+28:          </ul>
+29:          <ul class="navbar-nav">
+30:            <% if user_signed_in? %>
+31:              <li class="nav-item dropdown">
+32:                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+33:                  Mon profil
+34:                </a>
+35:                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+36:                  <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
+37:                  <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, data: {turbo_method: :delete}, class "dropdown-item" %>
+38:                </div>
+39:              </li>
+40:            <% else %>
+41:              <li class="nav-item dropdown">
+42:                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+43:                  S'inscrire / Se connecter
+44:                </a>
+45:                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+46:                  <%= link_to "S'inscrire", new_user_registration_path, class: "dropdown-item" %>
+47:                  <%= link_to "Se connecter", new_user_session_path, class: "dropdown-item" %>
+48:                </div>
+49:              </li>
+50:            <% end %>
+51:          </ul>
+52:        </div>
+53:      </div>
+54:    </nav>
+55:    
+56:    <%= yield %>
+57:    
+58:    <!-- Bootstrap JS et jQuery -->
+59:    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+60:    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+61:    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+62:    
+63:    </body>
+64:    </html>
+  
+app/views/layouts/application.html.erb:37: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:46:01 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 9.4ms | Allocations: 16147)
+  Rendered layout layouts/application.html.erb (Duration: 10.6ms | Allocations: 18057)
+Completed 500 Internal Server Error in 176ms (ActiveRecord: 1.8ms | Allocations: 306200)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <!DOCTYPE html>
+<html>
+<head>
+  <title>Votre titre</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <%= csrf_meta_tags %>
+  <%= csp_meta_tag %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container">
+    <a class="navbar-brand" href="#">Events App</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <%= link_to "Accueil", root_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Créer un événement", new_event_path, class: "nav-link" %>
+        </li>
+      </ul>
+      <ul class="navbar-nav">
+        <% if user_signed_in? %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Mon profil
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, data: {turbo_method: :delete}, class "dropdown-item" %>
+            </div>
+          </li>
+        <% else %>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              S'inscrire / Se connecter
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <%= link_to "S'inscrire", new_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Se connecter", new_user_session_path, class: "dropdown-item" %>
+            </div>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<%= yield %>
+
+<!-- Bootstrap JS et jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+):
+1:    <!DOCTYPE html>
+2:    <html>
+3:    <head>
+4:      <title>Votre titre</title>
+5:      <meta name="viewport" content="width=device-width, initial-scale=1">
+6:      <!-- Bootstrap CSS -->
+7:      <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+8:      <%= csrf_meta_tags %>
+9:      <%= csp_meta_tag %>
+10:      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+11:    </head>
+12:    <body>
+13:    
+14:    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+15:      <div class="container">
+16:        <a class="navbar-brand" href="#">Events App</a>
+17:        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+18:          <span class="navbar-toggler-icon"></span>
+19:        </button>
+20:        <div class="collapse navbar-collapse" id="navbarNav">
+21:          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+22:            <li class="nav-item">
+23:              <%= link_to "Accueil", root_path, class: "nav-link" %>
+24:            </li>
+25:            <li class="nav-item">
+26:              <%= link_to "Créer un événement", new_event_path, class: "nav-link" %>
+27:            </li>
+28:          </ul>
+29:          <ul class="navbar-nav">
+30:            <% if user_signed_in? %>
+31:              <li class="nav-item dropdown">
+32:                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+33:                  Mon profil
+34:                </a>
+35:                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+36:                  <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
+37:                  <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, data: {turbo_method: :delete}, class "dropdown-item" %>
+38:                </div>
+39:              </li>
+40:            <% else %>
+41:              <li class="nav-item dropdown">
+42:                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+43:                  S'inscrire / Se connecter
+44:                </a>
+45:                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+46:                  <%= link_to "S'inscrire", new_user_registration_path, class: "dropdown-item" %>
+47:                  <%= link_to "Se connecter", new_user_session_path, class: "dropdown-item" %>
+48:                </div>
+49:              </li>
+50:            <% end %>
+51:          </ul>
+52:        </div>
+53:      </div>
+54:    </nav>
+55:    
+56:    <%= yield %>
+57:    
+58:    <!-- Bootstrap JS et jQuery -->
+59:    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+60:    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+61:    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+62:    
+63:    </body>
+64:    </html>
+  
+app/views/layouts/application.html.erb:37: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:46:53 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 10.1ms | Allocations: 16147)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 38.7ms | Allocations: 51099)
+Completed 200 OK in 209ms (Views: 40.3ms | ActiveRecord: 1.7ms | Allocations: 339275)
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2024-05-07 16:46:57 +0200
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/edit.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.6ms | Allocations: 231)
+  Rendered devise/registrations/edit.html.erb within layouts/application (Duration: 11.2ms | Allocations: 3399)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 5148)
+Completed 200 OK in 29ms (Views: 17.9ms | ActiveRecord: 0.2ms | Allocations: 7747)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:47:00 +0200
+  
+ActionController::RoutingError (uninitialized constant UsersController):
+  
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:48:28 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 13.8ms | Allocations: 16141)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 45.0ms | Allocations: 51021)
+Completed 200 OK in 264ms (Views: 45.2ms | ActiveRecord: 3.1ms | Allocations: 339187)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:48:30 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+Redirected to http://localhost:3000/
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms | Allocations: 1761)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:48:30 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 673)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 3321)
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.1ms | Allocations: 3589)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:48:33 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+Redirected to http://localhost:3000/
+Completed 302 Found in 2ms (ActiveRecord: 0.1ms | Allocations: 884)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:48:33 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 672)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 9.8ms | Allocations: 3311)
+Completed 200 OK in 12ms (Views: 11.1ms | ActiveRecord: 0.3ms | Allocations: 3577)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:49:42 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 16141)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 43.2ms | Allocations: 51034)
+Completed 200 OK in 218ms (Views: 40.8ms | ActiveRecord: 5.6ms | Allocations: 339200)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:49:46 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 0.6ms | Allocations: 1771)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:49:46 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 673)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 5.9ms | Allocations: 3340)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.1ms | Allocations: 3608)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:49:48 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+Redirected to http://localhost:3000/
+Completed 302 Found in 26ms (ActiveRecord: 0.9ms | Allocations: 872)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:49:48 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 672)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 6.9ms | Allocations: 3324)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.2ms | Allocations: 3590)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:52:28 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.0ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 9.7ms | Allocations: 16141)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 34.9ms | Allocations: 51068)
+Completed 200 OK in 275ms (Views: 36.3ms | ActiveRecord: 1.9ms | Allocations: 339234)
+
+
+Started GET "/users/sign_out" for 127.0.0.1 at 2024-05-07 16:52:30 +0200
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"sign_out"}
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:5:in `show'
+Redirected to http://localhost:3000/
+Completed 302 Found in 21ms (ActiveRecord: 1.5ms | Allocations: 1767)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:52:30 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 673)
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 3316)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.1ms | Allocations: 3584)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2024-05-07 16:52:43 +0200
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 12.1ms | Allocations: 3512)
+  Rendered events/new.html.erb within layouts/application (Duration: 14.8ms | Allocations: 3831)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 19.1ms | Allocations: 6124)
+Completed 200 OK in 24ms (Views: 20.0ms | ActiveRecord: 0.1ms | Allocations: 6495)
+
+
+Started POST "/events" for 127.0.0.1 at 2024-05-07 16:53:12 +0200
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"title"=>"aikjdoijada", "description"=>"aklfaida", "start_date"=>"2025-05-11T12:30", "duration"=>"60", "price"=>"150", "user_id"=>"Xavier"}, "commit"=>"Create Event"}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:30:in `block in create'
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:30:in `block in create'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/events_controller.rb:30:in `block in create'
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 5.7ms | Allocations: 2846)
+  Rendered events/new.html.erb within layouts/application (Duration: 6.4ms | Allocations: 2925)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 52.6ms | Allocations: 5222)
+Completed 200 OK in 77ms (Views: 56.3ms | ActiveRecord: 1.2ms | Allocations: 11489)
+
+
+Started GET "/" for 127.0.0.1 at 2024-05-07 16:53:59 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (1.6ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 35.5ms | Allocations: 679)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 47.0ms | Allocations: 3333)
+Completed 200 OK in 50ms (Views: 46.5ms | ActiveRecord: 1.7ms | Allocations: 3607)
+
+
+Started GET "/events/1" for 127.0.0.1 at 2024-05-07 16:54:08 +0200
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:67:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/_event.html.erb (Duration: 5.4ms | Allocations: 324)
+  Rendered events/show.html.erb within layouts/application (Duration: 45.1ms | Allocations: 3897)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 57.7ms | Allocations: 6179)
+Completed 200 OK in 71ms (Views: 58.5ms | ActiveRecord: 0.5ms | Allocations: 7554)
+
+
+Started GET "/events/1/edit" for 127.0.0.1 at 2024-05-07 16:54:10 +0200
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mEvent Load (0.4ms)[0m  [1m[34mSELECT "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:67:in `set_event'
+  Rendering layout layouts/application.html.erb
+  Rendering events/edit.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 3.7ms | Allocations: 1632)
+  Rendered events/edit.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1888)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 4169)
+Completed 200 OK in 21ms (Views: 11.8ms | ActiveRecord: 0.5ms | Allocations: 4855)
+
+
+Started GET "/events" for 127.0.0.1 at 2024-05-07 16:54:17 +0200
+Processing by EventsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.9ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:12
+  Rendered events/index.html.erb within layouts/application (Duration: 22.2ms | Allocations: 672)
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 71.1ms | Allocations: 3314)
+Completed 200 OK in 92ms (Views: 84.3ms | ActiveRecord: 1.1ms | Allocations: 3579)
+
+
+Started GET "/events/new" for 127.0.0.1 at 2024-05-07 16:56:59 +0200
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 24.8ms | Allocations: 1553)
+  Rendered events/new.html.erb within layouts/application (Duration: 25.5ms | Allocations: 1632)
+  [1m[36mUser Load (3.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 48.0ms | Allocations: 3918)
+Completed 200 OK in 50ms (Views: 45.8ms | ActiveRecord: 3.1ms | Allocations: 4191)
+
+
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" /* loading for pp */ LIMIT ?[0m  [["LIMIT", 11]]
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+DEPRECATION WARNING: `Rails.application.secrets` is deprecated in favor of `Rails.application.credentials` and will be removed in Rails 7.2. (called from <main> at /Users/Xavier/Downloads/eventbritev2-main/config/environment.rb:5)
+Started GET "/events/new" for 127.0.0.1 at 2024-05-07 17:01:44 +0200
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by EventsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 8.2ms | Allocations: 4900)
+  Rendered events/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 5336)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 39847)
+Completed 200 OK in 200ms (Views: 36.9ms | ActiveRecord: 2.6ms | Allocations: 341759)
+
+
+Started POST "/events" for 127.0.0.1 at 2024-05-07 17:02:08 +0200
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"title"=>"xaaaf", "description"=>"xijaooafnadkopakokdopakdpokakdkakdpaa", "start_date"=>"2025-02-11T04:20", "duration"=>"3", "price"=>"12", "location"=>"Paris"}, "commit"=>"Create Event"}
+[31mUnpermitted parameter: :location. Context: { controller: EventsController, action: create, request: #<ActionDispatch::Request:0x00000001156d3498>, params: {"authenticity_token"=>"[FILTERED]", "event"=>{"title"=>"xaaaf", "description"=>"xijaooafnadkopakokdopakdpokakdkakdpaa", "start_date"=>"2025-02-11T04:20", "duration"=>"3", "price"=>"12", "location"=>"Paris"}, "commit"=>"Create Event", "controller"=>"events", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 2.7ms | Allocations: 2451)
+  Rendered events/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 2530)
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 24.7ms | Allocations: 4815)
+Completed 200 OK in 46ms (Views: 23.1ms | ActiveRecord: 2.3ms | Allocations: 8290)
+
+
+Started POST "/events" for 127.0.0.1 at 2024-05-07 17:02:13 +0200
+Processing by EventsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "event"=>{"title"=>"xaaaf", "description"=>"xijaooafnadkopakokdopakdpokakdkakdpaa", "start_date"=>"2025-02-11T04:20", "duration"=>"3", "price"=>"12", "location"=>"Paris"}, "commit"=>"Create Event"}
+[31mUnpermitted parameter: :location. Context: { controller: EventsController, action: create, request: #<ActionDispatch::Request:0x0000000115833ea0>, params: {"authenticity_token"=>"[FILTERED]", "event"=>{"title"=>"xaaaf", "description"=>"xijaooafnadkopakokdopakdpokakdkakdpaa", "start_date"=>"2025-02-11T04:20", "duration"=>"3", "price"=>"12", "location"=>"Paris"}, "commit"=>"Create Event", "controller"=>"events", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (Duration: 3.1ms | Allocations: 2280)
+  Rendered events/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2359)
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? ORDER BY "users"."id" ASC LIMIT ?[0m  [["id", 11], ["LIMIT", 1]]
+  ↳ app/views/layouts/application.html.erb:30
+  Rendered layout layouts/application.html.erb (Duration: 7.4ms | Allocations: 4644)
+Completed 200 OK in 19ms (Views: 7.8ms | ActiveRecord: 0.1ms | Allocations: 6168)
+
+
